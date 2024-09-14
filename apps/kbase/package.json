@@ -1,5 +1,5 @@
 {
-  "name": "kbase",
+  "name": "@november/kbase",
   "version": "0.0.0",
   "private": true,
   "scripts": {

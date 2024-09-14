@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  web:
+    build:
+      context: ./apps/web
+    container_name: web
+    networks:
+      - app-net
+
+  kbase:
+    build:
+      context: ./apps/kbase
+    container_name: kbase
+    networks:
+      - app-net
+
+  nginx:
+    image: nginx:stable-alpine
+    container_name: nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - web
+      - kbase
+    networks:
+      - app-net
+
+networks:
+  app-net:
+    driver: bridge
