@@ -17,7 +17,8 @@ FROM nginx:stable-alpine
 
 RUN rm -rf /usr/share/nginx/html/*
 
-COPY --from=builder /app/build /usr/share/nginx/html
+COPY --from=builder /app/nginx/nginx.conf /etc/nginx
+COPY --from=builder /app/build /usr/share/nginx/html/docs
 
-EXPOSE 80
+EXPOSE 3001
 CMD ["nginx", "-g", "daemon off;"]
