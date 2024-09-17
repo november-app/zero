@@ -1,0 +1,30 @@
+include:
+  - common.yaml
+
+services:
+  web:
+    container_name: web
+    build:
+      context: ../../apps/web
+      target: dev
+
+    restart: always
+    command: pnpm dev
+    environment:
+      - NODE_ENV=development
+    volumes:
+      - ../../apps/web:/app
+      - /app/node_modules
+      - /app/.next
+
+    depends_on:
+      - postgres
+    networks:
+      - app-net
+
+#  kbase:
+#    build:
+#      context: ./apps/kbase
+#    container_name: kbase
+#    networks:
+#      - app-net
