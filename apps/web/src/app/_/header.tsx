@@ -1,6 +1,6 @@
 import { ModeToggle } from "@/components/theme/toggle";
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
+import SignInButton from "@/app/_/signIn";
 
 export default function Header() {
     return (
@@ -15,9 +15,7 @@ export default function Header() {
                     {/* Sign In button (aligned to the right) */}
                     <div className="absolute right-0 flex items-center space-x-4">
                         <ModeToggle />
-                        <Button variant='secondary'>
-                            Sign in
-                        </Button>
+                        <SignInButton />
                     </div>
                 </div>
             </nav>
