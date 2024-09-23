@@ -15,6 +15,7 @@ struct:
             - colleges/
             - essays/
             - letters/
+        - auth/: November authentication routes
     - components/: globally reused components
         - theme/: Light/dark theming-specific
         - ui/: shadcn-ui install directory
