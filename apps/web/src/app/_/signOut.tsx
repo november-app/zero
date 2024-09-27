@@ -1,14 +1,14 @@
 import { signOut } from "@/lib/auth";
 import { Button } from "@/components/ui/button";
 
-export default function SignInButton() {
+export default function SignOutButton() {
     return (
         <form action={async () => {
             "use server"
-            await signOut()
+            await signOut({ redirectTo: '/'})
         }}>
             <Button variant='secondary'>
-                Sign in
+                Sign out
             </Button>
         </form>
     )
