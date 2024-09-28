@@ -5,6 +5,7 @@ services:
     build:
       context: apps/web
     container_name: web
+    hostname: web
     restart: always
     depends_on:
       - postgres
@@ -14,6 +15,7 @@ services:
   nginx:
     image: nginx:stable-alpine
     container_name: nginx
+    hostname: localhost
     ports:
       - "80:80"
     volumes:
@@ -26,6 +28,8 @@ services:
 
   postgres:
     image: postgres:16
+    container_name: novodata
+    hostname: novodata
     restart: always
     ports: # indev prisma migrations?
       - "5432:5432"
