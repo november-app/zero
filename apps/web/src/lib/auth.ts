@@ -10,6 +10,12 @@ export const config: NextAuthConfig = {
     pages: {
         signIn: '/auth/signin',
         signOut: '/auth/signout',
+    },
+    callbacks: {
+        authorized: async ({ auth }) => {
+            // authorizes if logged in
+            return !!auth
+        }
     }
 }
 

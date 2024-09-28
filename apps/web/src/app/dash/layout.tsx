@@ -1,7 +1,5 @@
 import React from 'react';
 import Sidebar from "@/app/dash/_/sidebar";
-import { auth } from "@/lib/auth";
-import { prisma } from "@/lib/prisma";
 
 async function DashboardLayout({children}: { children: React.ReactNode }) {
 

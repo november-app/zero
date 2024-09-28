@@ -1,16 +1,10 @@
 import React from 'react';
-import { auth } from "@/lib/auth";
-import { prisma } from "@/lib/prisma";
+import { authUser } from "@/lib/utils";
+import { redirect } from "next/navigation";
 
 async function DashboardPage() {
-    const sesh = await auth()
-
-    // eslint-disable-next-line @typescript-eslint/no-non-null-asserted-optional-chain
-    const userEmail = sesh?.user?.email!
-    const user = await prisma.user.findUnique({
-        where: {email: userEmail}
-    })
-
+    const user = await authUser()
+    if (!user) redirect('/auth/signin')
 
     return (
         <div>
