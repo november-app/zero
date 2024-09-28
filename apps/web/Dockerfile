@@ -11,6 +11,7 @@ RUN pnpm fetch
 COPY . .
 RUN pnpm install --offline
 
+RUN pnpm prisma generate
 RUN pnpm build
 
 ENV NODE_ENV production
