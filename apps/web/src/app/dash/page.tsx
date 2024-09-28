@@ -8,7 +8,7 @@ async function DashboardPage() {
 
     return (
         <div>
-            <h1 className='text-secondary'>Hello from the dashboard index page! Your name should be {user?.name}</h1>
+            <h1 className='text-foreground'>Hello from the dashboard index page! Your name should be {user?.name}</h1>
         </div>
     );
 }
