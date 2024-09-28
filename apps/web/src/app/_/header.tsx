@@ -1,4 +1,4 @@
-import { ModeToggle } from "@/components/theme/toggle";
+import { ThemeToggle } from "@/components/theme/toggle";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Logo from "@/components/logo";
@@ -15,7 +15,7 @@ export default function Header() {
 
                     {/* Sign In button (aligned to the right) */}
                     <div className="absolute right-0 flex items-center space-x-4">
-                        <ModeToggle />
+                        <ThemeToggle />
 
                         <Link href='/auth/signin'>
                             <Button variant='secondary'>

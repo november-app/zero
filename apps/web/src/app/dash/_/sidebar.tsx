@@ -3,6 +3,8 @@ import SidebarLinks from "@/app/dash/_/sidebar-links";
 import Logo from "@/components/logo";
 import Image from 'next/image'
 import SignOutButton from "@/app/_/signOut";
+import { ThemeToggle } from "@/components/theme/toggle";
+import { Badge } from "@/components/ui/badge";
 
 interface SidebarProps {
     userName: string;
@@ -29,11 +31,13 @@ function Sidebar(props: SidebarProps) {
                         height={40}
                         className="rounded-full"
                     />
-                    <div>
-                        <p className="font-semibold">{props.userName}</p>
-                    </div>
+                    {/*<div>*/}
+                    {/*    <p className="font-semibold">{props.userName}</p>*/}
+                    {/*</div>*/}
+                    <ThemeToggle />
                     <SignOutButton />
                 </div>
+                {process.env.NODE_ENV === 'development' && <Badge className='mt-2 bg-center' variant='secondary'>[dev] november alpha</Badge>}
             </div>
         </aside>
     );

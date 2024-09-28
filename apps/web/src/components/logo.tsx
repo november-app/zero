@@ -15,6 +15,7 @@ const Logo: FC<LogoProps> = ({ width = 100, height = 100, altText = 'November Lo
             width={width}
             height={height}
             className="object-contain" // Tailwind class for scaling
+            priority
         />
     );
 };
