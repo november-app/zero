@@ -1,6 +1,7 @@
 import { ModeToggle } from "@/components/theme/toggle";
-import Image from "next/image";
-import SignInButton from "@/app/_/signIn";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import Logo from "@/components/logo";
 
 export default function Header() {
     return (
@@ -9,13 +10,18 @@ export default function Header() {
                 <div className="relative flex h-16 items-center justify-center">
                     {/* Logo */}
                     <div className="flex items-center space-x-4">
-                        <Image src='/logo.svg' alt='novo logo' width={48} height={48}/>
+                        <Logo height={48} width={48} />
                     </div>
 
                     {/* Sign In button (aligned to the right) */}
                     <div className="absolute right-0 flex items-center space-x-4">
                         <ModeToggle />
-                        <SignInButton />
+
+                        <Link href='/auth/signin'>
+                            <Button variant='secondary'>
+                                Sign in
+                            </Button>
+                        </Link>
                     </div>
                 </div>
             </nav>
