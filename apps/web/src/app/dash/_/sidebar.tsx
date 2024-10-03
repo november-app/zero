@@ -37,7 +37,7 @@ function Sidebar(props: SidebarProps) {
                     <ThemeToggle />
                     <SignOutButton />
                 </div>
-                {process.env.NODE_ENV === 'development' && <Badge className='mt-2 bg-center' variant='secondary'>[dev] november alpha</Badge>}
+                {process.env.NODE_ENV === 'development' && <Badge className='mt-2 bg-green-500' variant='outline'>[dev] november alpha</Badge>}
             </div>
         </aside>
     );

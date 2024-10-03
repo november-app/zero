@@ -12,7 +12,27 @@ async function getTableData(): Promise<College[]> {
             name: 'Harvard',
             status: 'in progress',
             deadline: new Date('January 1, 2025')
-        }
+        },
+        {
+            name: 'MIT',
+            status: 'started',
+            deadline: new Date('January 15, 2025')
+        },
+        {
+            name: 'Stanford',
+            status: 'in progress',
+            deadline: new Date('January 1, 2025')
+        },
+        {
+            name: 'Princeton',
+            status: 'completed',
+            deadline: new Date('November 1, 2025')
+        },
+        {
+            name: 'Alphabet College',
+            status: 'completed',
+            deadline: new Date('November 15, 2025')
+        },
     ]
 }
 
@@ -25,8 +45,8 @@ async function CollegesPage() {
     return (
         <>
             <h1 className='text-xl font-bold'>Welcome to your application organizer, {user.name}.</h1>
-            <p>You are due for {data.length} applications.</p>
-            <div className='container mx-auto py-10'>
+            <p className='pt-3'>You are due for {data.length} applications.</p>
+            <div className='container mx-auto py-6'>
                 <DataTable columns={columns} data={data}/>
             </div>
         </>
