@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 function HeroSection() {
     return (
-        <div className='bg-background relative isolate px-6 pt-14 lg:px-8'>
+        <div className='bg-background relative isolate px-6 pt-14 lg:px-8 grow'>
             <div className='text-center mx-auto max-w-3xl py-32 '>
                 <h1 className='text-balance text-4xl font-bold tracking-tight text-foreground sm:text-6xl'>
                     Organize your college applications effortlessly
