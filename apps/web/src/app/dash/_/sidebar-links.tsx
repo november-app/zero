@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils";
 const links: { name: string, href: string, icon: typeof HomeIcon }[] = [
     {name: 'Home', href: '/dash', icon: HomeIcon},
     {name: 'List', href: '/dash/colleges', icon: ListIcon},
-    {name: 'Essays', href: '/dash/essays', icon: FileTextIcon},
+    {name: 'Essays', href: '/dash/essays/', icon: FileTextIcon},
     {name: 'LoRs', href: '/dash/letters', icon: MailsIcon},
 ]
 
@@ -20,6 +20,7 @@ function SidebarLinks() {
         <>
             {links.map((link) => {
                 const LinkIcon = link.icon
+
 
                 return (
                     // TailwindCSS is so fun
