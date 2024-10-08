@@ -6,7 +6,10 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 
-const links: { name: string, href: string[], icon: typeof HomeIcon }[] = [
+// href array determines pathnames to highlight, [0] determines actual href
+type TSidebarLinks = { name: string, href: string[], icon: typeof HomeIcon }[];
+
+const links: TSidebarLinks = [
     {name: 'Home', href: ['/dash'], icon: HomeIcon},
     {name: 'List', href: ['/dash/colleges'], icon: ListIcon},
     {name: 'Essays', href: ['/dash/essays', '/dash/essays/personal'], icon: FileTextIcon},
