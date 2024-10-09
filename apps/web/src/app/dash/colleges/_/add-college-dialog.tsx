@@ -11,7 +11,7 @@ import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 
-function AddCollegeButton() {
+function AddCollegeDialog() {
     return (
         <Dialog>
             <DialogTrigger asChild>
@@ -42,4 +42,4 @@ function AddCollegeButton() {
     )
 }
 
-export default AddCollegeButton;
+export default AddCollegeDialog;

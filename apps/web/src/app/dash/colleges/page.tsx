@@ -4,7 +4,7 @@ import { DataTable } from "@/app/dash/colleges/_/table";
 import { authUser } from "@/lib/utils";
 import { redirect } from "next/navigation";
 import { Button } from "@/components/ui/button";
-import AddCollegeButton from "@/app/dash/colleges/_/add-college-button";
+import AddCollegeDialog from "@/app/dash/colleges/_/add-college-dialog";
 
 async function getTableData(): Promise<College[]> {
     // TODO: Implement actual data retrieval
@@ -49,7 +49,7 @@ async function CollegesPage() {
             <h1 className='text-xl font-bold'>Welcome to your application organizer, {user.name}.</h1>
             <p className='py-3'>You are due for {data.length} applications.</p>
 
-            <AddCollegeButton />
+            <AddCollegeDialog />
 
             <div className='container mx-auto py-6'>
                 <DataTable columns={columns} data={data}/>
